@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments :: head('Iniciar sesión')}"></head>
+<head th:replace="~{fragments :: head('Iniciar sesión')}"><title>LabTrack - Iniciar Sesión</title></head>
 <body class="login-body">
 <main class="login-contenedor">
 
@@ -72,7 +72,7 @@
         <form id="form-login" method="post" th:action="@{/login}" novalidate>
             <div class="campo">
                 <label for="codigo">Código de usuario</label>
-                <input id="codigo" name="codigo" type="text" th:value="${codigo}" autocomplete="username" placeholder="N00123456" autofocus>
+                <input id="codigo" name="codigo" type="text" th:value="${codigo}" autocomplete="username" placeholder="N00123456">
             </div>
             <div class="campo">
                 <label for="password">Contraseña</label>
