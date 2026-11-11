@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments :: head('Solicitudes pendientes')}"></head>
+<head th:replace="~{fragments :: head('Solicitudes pendientes')}"><title>LabTrack - Solicitudes</title></head>
 <body>
 <header th:replace="~{fragments :: nav('solicitudes')}"></header>
 <main class="contenido">
@@ -46,8 +46,8 @@
                         <button type="submit" class="boton btn-aprobar" th:id="'aprobar-' + ${s.id}">Aprobar</button>
                     </form>
                     <form method="post" th:action="@{/admin/solicitudes/{id}/rechazar(id=${s.id})}" class="form-rechazo" novalidate>
-                        <label th:for="'motivo-' + ${s.id}" hidden>Motivo del rechazo</label>
-                        <input type="text" name="motivo" th:id="'motivo-' + ${s.id}" placeholder="Motivo del rechazo">
+                        <label for="motivo" th:for="'motivo-' + ${s.id}" hidden>Motivo del rechazo</label>
+                        <input id="motivo" type="text" name="motivo" th:id="'motivo-' + ${s.id}" placeholder="Motivo del rechazo">
                         <button type="submit" class="boton btn-rechazar" th:id="'rechazar-' + ${s.id}">Rechazar</button>
                     </form>
                 </td>
