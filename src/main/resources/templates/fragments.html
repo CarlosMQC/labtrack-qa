@@ -28,7 +28,7 @@
     <nav th:if="${rolSesion == 'ENCARGADO'}">
         <a id="link-solicitudes" th:href="@{/admin/solicitudes}" th:classappend="${activo == 'solicitudes'} ? 'activo'">Solicitudes</a>
         <a id="link-devoluciones" th:href="@{/admin/devoluciones}" th:classappend="${activo == 'devoluciones'} ? 'activo'">Devoluciones</a>
-        <a id="link-catalogo" th:href="@{/catalogo}" th:classappend="${activo == 'catalogo'} ? 'activo'">Catálogo</a>
+        <a id="link-catalogo-admin" th:href="@{/catalogo}" th:classappend="${activo == 'catalogo'} ? 'activo'">Catálogo</a>
     </nav>
     <span class="usuario">
         <span class="avatar" th:text="${nombreSesion != null} ? ${#strings.substring(nombreSesion, 0, 1)} : '?'">A</span>
